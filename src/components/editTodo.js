@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+import '../App.css';
+
 class EditComponent extends Component {
   handleEdit = (e) => {
     e.preventDefault();
@@ -18,14 +20,14 @@ class EditComponent extends Component {
             <input
               type="text"
               name="title"
-              style={{ width: '198px', height: '25px' }}
+              style={{ height: '40px' }}
               ref={(input) => (this.getTitle = input)}
               defaultValue={this.props.todo.title}
             />
           </li>
-          <button className="article-button-item">Upgrade</button>
+          <button className="button-item">Upgrade</button>
           <button
-            className="article-button-item"
+            className="button-item"
             type="button"
             onClick={() => this.props.dispatch({ type: 'DELETE_TODO', id: this.props.todo.id })}
           >

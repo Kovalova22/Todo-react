@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+
+import '../App.css';
 import { Button, Form } from 'reactstrap';
 
 class TodoInput extends Component {
@@ -20,10 +22,10 @@ class TodoInput extends Component {
 
   render() {
     return (
-      <Form onSubmit={this.handleSubmit}>
+      <form className="todo-form" onSubmit={this.handleSubmit}>
         <input placeholder="Add todo" ref={(input) => (this.getTitle = input)} />
         <Button>Add</Button>
-      </Form>
+      </form>
     );
   }
 }
