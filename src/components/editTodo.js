@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 class EditComponent extends Component {
   handleEdit = (e) => {
@@ -7,10 +8,11 @@ class EditComponent extends Component {
     const data = {
       newTitle,
     };
+    this.props.dispatch({ type: 'UPDATE', id: this.props.todo.id, data: data });
   };
   render() {
     return (
-      <form>
+      <form onSubmit={this.handleEdit}>
         <ul>
           <li>
             <input
@@ -18,14 +20,14 @@ class EditComponent extends Component {
               name="title"
               style={{ width: '198px', height: '25px' }}
               ref={(input) => (this.getTitle = input)}
-              defaultValue={this.props.hotdog.title}
+              defaultValue={this.props.todo.title}
             />
           </li>
           <button className="article-button-item">Upgrade</button>
           <button
             className="article-button-item"
             type="button"
-            onClick={() => this.props.dispatch({ type: 'DELETE_HOTDOG', id: this.props.hotdog.id })}
+            onClick={() => this.props.dispatch({ type: 'DELETE_TODO', id: this.props.todo.id })}
           >
             Delete
           </button>
@@ -34,4 +36,4 @@ class EditComponent extends Component {
     );
   }
 }
-export default EditComponent;
+export default connect()(EditComponent);

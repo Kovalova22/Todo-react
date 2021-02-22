@@ -1,4 +1,5 @@
-import * as ActionTypes from './ActionTypes';
+import * as ActionTypes from './actionTypes';
+import { TODOS } from './todo';
 
 const reducer = (state = [], action) => {
   switch (action.type) {

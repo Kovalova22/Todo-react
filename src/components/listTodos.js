@@ -1,6 +1,14 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
 import EditComponent from './editTodo';
 import Todo from './todo';
+
+const mapStateToProps = (state) => {
+  return {
+    todos: state.todos,
+  };
+};
 
 class ListTodos extends Component {
   render() {
@@ -16,4 +24,4 @@ class ListTodos extends Component {
   }
 }
 
-export default ListTodos;
+export default connect(mapStateToProps)(ListTodos);
