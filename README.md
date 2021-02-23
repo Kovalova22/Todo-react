@@ -1,4 +1,4 @@
-#Simple Todo Application written usind React and Redux
+# Simple Todo Application written usind React and Redux
 You can test it https://kovalova22.github.io/Todo-react/
 
 # Another version of this App with backend on NodeJs can be found 
