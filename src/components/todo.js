@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 import '../App.css';
 
@@ -15,4 +16,8 @@ class Todo extends Component {
     );
   }
 }
+Todo.propTypes = {
+  dispatch: PropTypes.func.isRequired,
+  todo: PropTypes.object.isRequired,
+};
 export default connect()(Todo);

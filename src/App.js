@@ -5,14 +5,6 @@ import TodoInput from './components/input';
 import ListTodos from './components/listTodos';
 
 class App extends Component {
-  handleSubmit = (e) => {
-    e.preventDefault();
-    const title = this.getTitle.value;
-    const data = {
-      title,
-      editing: false,
-    };
-  };
   render() {
     return (
       <div className="App">

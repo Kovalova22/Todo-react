@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 import '../App.css';
-import { Button, Form } from 'reactstrap';
+import { Button } from 'reactstrap';
 
 class TodoInput extends Component {
   handleSubmit = (e) => {
@@ -29,4 +30,7 @@ class TodoInput extends Component {
     );
   }
 }
+TodoInput.propTypes = {
+  dispatch: PropTypes.func.isRequired,
+};
 export default connect()(TodoInput);

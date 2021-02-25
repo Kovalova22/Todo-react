@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 import EditComponent from './editTodo';
 import Todo from './todo';
@@ -23,5 +24,7 @@ class ListTodos extends Component {
     );
   }
 }
-
+ListTodos.propTypes = {
+  todos: PropTypes.array.isRequired,
+};
 export default connect(mapStateToProps)(ListTodos);
