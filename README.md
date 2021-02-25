@@ -1,3 +1,9 @@
+# Simple Todo Application written using React and Redux
+You can test it https://kovalova22.github.io/Todo-react/
+
+# Another version of this App with backend on NodeJs can be found 
+https://github.com/Kovalova22/Todo-app
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
