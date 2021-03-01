@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import '../App.css';
+import '../App.scss';
 
 class EditComponent extends Component {
   handleEdit = (e) => {

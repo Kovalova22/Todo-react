@@ -1,0 +1,61 @@
+@mixin App($font-family) {
+  font-family: $font-family;
+  App: $font-family;
+}
+
+body {
+  background-image: url(https://www.enjpg.com/img/2020/grey-aesthetic-8.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include App(url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap'));
+}
+
+.App {
+  text-align: center;
+  input {
+    height: 40px;
+    border-radius: 5px;
+    background-color: #e6e6e6;
+  }
+  button {
+    height: 50px;
+    width: 70px;
+    border-radius: 10px;
+    background-color: #333333;
+    color: #a6a6a6;
+    transition: 0.3s ease;
+  }
+  button:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+  ul {
+    list-style: none;
+    display: flex;
+    @media screen and (max-width: 450px){
+      display: inline;      
+    }
+  }
+  li {
+    margin: 20px;
+    font-size: x-large;
+    width: 300px;
+  }
+  .todo-form {
+    margin: 20px;
+  }
+  .column {
+    margin: 20px;
+    width: 300px;
+    font-size: x-large;
+  } 
+  .todo {
+    display: flex;
+  }
+  .button-item {
+    margin: 20px 0px;
+    @media screen and (max-width: 450px){
+        margin: 0px;
+    }
+  }
+}
